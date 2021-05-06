@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="conteiner mt-5">
+<div class="row justify-content-center">
+
+<div class="col-md-3">
+<div class="card card-body">
+<span th:if="${session.alumno!=null}">Bienvenido alumno<span class="font-italic"th:text="${session.alumno.dni}"></span></span>
+
+<form th:action="@{/logout}" method="POST">
+<button type="submit" class="btn btn-primary mt-3">Salir</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

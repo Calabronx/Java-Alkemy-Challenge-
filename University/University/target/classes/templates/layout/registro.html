@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layout/base-layout::head"></head>
+<meta charset="ISO-8859-1">
+
+
+<body>
+<div class="container mt-5">
+<div class="row justify-content-center">
+		<div class="col-md-6">
+		<div class="card">
+		<div class="card-header"><h4>Registro</h4></div>
+		<div class= "card-body">
+		
+			<form th:action="@{/auth/registro}" th:object=${alumno} method="POST">
+				<div class="row form-group">
+				<label class="col-md-3">Nombre</label>
+					<input type="text" class="form-control col-md-7" th:field="*{nombre}"/>
+					<small th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
+					</div>
+					
+					<div class="row form-group">
+				<label class="col-md-3">Id</label>
+					<input type="text" class="form-control col-md-7" th:field="*{id}"/>
+					
+					</div>
+					
+					<div class="row form-group">
+				<label class="col-md-3">Dni</label>
+					<input type="text" class="form-control col-md-7" th:field="*{dni}"/>
+					
+					</div>
+			<div class="row form-group">
+				<label class="col-md-3">Apellido</label>
+					<input type="text" class="form-control col-md-7" th:field="*{apellido}"/>
+					
+			</div>
+		<div class="row form-group">
+				<label class="col-md-3">Legajo</label>
+					<input type="text" class="form-control col-md-7" th:field="*{legajo}"/>
+					
+					</div>
+	
+	</form>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</body>
+</head>
+</html>
